@@ -34,3 +34,25 @@ function sum(a,b){
 }
 
 
+const trovaDispari = numero => numero % 2 !== 0;
+
+const numeri = [4,7,5,4,2,8,9,9,2,1];
+//console.log(numeri);
+
+let dispari = numeri.filter(numero => numero % 2 !== 0);
+//console.log("trova dispari ma con funzione anonima",dispari);
+
+
+// javascript 2015
+const parole = ['latte','casa','mario','mela'];
+const findWord = (word) => {
+    return (item) => item === word;
+}
+// javascript 2009-2014
+function _findWord(word){
+    return function(item){
+        return item === word
+    };
+}
+const result = parole.filter(findWord('mela'));
+console.log(result);

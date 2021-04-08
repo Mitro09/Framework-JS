@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+</head>
+<body>
+    <script>
+
+        const fuori = 10;
+
+        function funzioneInterna(){
+            const dentroInterna = 20;
+            console.log("il valore di fuori è ",fuori);
+
+            function funzioneDentroInterna(){
+                console.log("il valore dentro la funzione interna è ",dentroInterna);
+            }
+            funzioneDentroInterna();
+        }
+
+    </script>    
+    
+</body>
+</html>

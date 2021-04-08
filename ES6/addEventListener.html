@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add event listener</title>
+    <style>
+        #quadrato{
+            height:100px;
+            width:100px;
+            background-color: red;
+            position:absolute;
+            left:0px;
+            top:100px;
+        }
+        #quadrato p{
+            color:white;
+        }
+        #rettangolo{
+            height:100px;
+            width:200px;
+            background-color: blue;
+        }
+        #rettangolo p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="avantiBtn">avanti</button>
+    <button id="indietroBtn">indietro</button>
+    <div id="quadrato">
+        <p>quadrato</p>
+    </div>
+    <div id="rettangolo">
+        <p>rettangolo</p>
+    </div>
+    <script>
+        const quadrato = document.querySelector('#quadrato');
+        const rettangolo = document.querySelector('#rettangolo');
+        const avantiBtn = document.querySelector('#avantiBtn');
+        const indietroBtn = document.querySelector('#indietroBtn');
+
+        console.log("trovato i protagonisti",quadrato,avantiBtn);
+        let add = 0;
+        function vaiAvanti(){
+            //console.log("sono vai avanti");
+            //console.log(add);
+            add += 100;
+            //console.log(add);
+            quadrato.style.left = add+"px";
+        }
+        function vaiIndietro(){
+            add -= 100;
+            quadrato.style.left = add+"px";
+        }
+
+        avantiBtn.addEventListener('click',vaiAvanti);
+        indietroBtn.addEventListener('click',vaiIndietro);
+    </script>  
+    
+    <script>
+        
+        const cambiaColore = evt => {
+            evt.target.style.backgroundColor = "yellow";
+        }
+        function _cambiaColore(evt){
+            evt.target.style.backgroundColor = "yellow";
+        }
+        quadrato.addEventListener('mousemove',cambiaColore);
+        rettangolo.addEventListener('mousemove',_cambiaColore);
+    </script>
+</body>
+</html>
