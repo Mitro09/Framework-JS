@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a; // function scope
+        let b; // block scope / può essere riassegnato ma non ridichiarato
+        const c = 0; // block scope
+
+        let nome = "roby";
+
+        var d = "fuori dalla funzione";
+
+        console.log(this);
+
+        function test() {
+
+            var d = "dentro test"; //se var viene dichiarato nuovamente rimane a se nella funzione dove è successo
+
+            function test2() {
+                console.log(this);
+
+                var d = "dentro test 2";
+                console.log("il primo valore di d è: ", d);
+            }
+            test2();
+            console.log("il secondo valore di d è: ", d);
+        }
+        test();
+
+        console.log("il terzo valore di d è: ", d);
+    </script>
+
+
+</body>
+
+</html>

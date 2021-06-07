@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event and addEvenetListener</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <button id="bottone_1" class="btn btn-primary" type="button">Bottone 1</button>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function main() {
+            //qui verrà esguito tutto lo scprit principale
+            const bottone_1 = document.querySelector('#bottone_1');
+            bottone_1.addEventListener('click', function(evt) {
+                console.log(evt.target);
+
+            });
+        }
+        document.addEventListener('DOMContentLoaded', main);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+
+</head>
+<body>
+    <div id="questions">
+
+    </div>
+
+    <script>
+        fetch("https://opentdb.com/api.php?amount=10&category=15")
+        .then((response)=>{
+            if(response.ok){
+                return response.json()
+            }
+            else{
+                alert("ERROR")
+            }
+        })
+        .then((data)=>{
+            //console.log(data);
+            document.getElementById('questions').innerHTML = 
+                        data.results.map((item)=>"<p>" + item.question + "</p>").join("");
+        })
+        
+    </script>
+</body>
+</html>

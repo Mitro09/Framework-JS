@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Promise</h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<h1 id="demo"></h1>
+
+
+<button id="button">Non Premere Assolutamente</button>
+<script>
+let p = ['porco','cane','merda','stronzo','bastardo','infame','cristo','madonna','pezzente','ebreo'];
+let myPromise = new Promise(function(myResolve, myReject) {
+  document.getElementById('button').addEventListener('click',
+    function(){
+        myResolve('cazzo premi,stronzo!');
+    })  
+  setTimeout(function(){ myResolve("I love You !!"); }, 3000);
+  setInterval(function(){myResolve("popopo")},1000)
+});
+
+myPromise.then(function(value) {
+  document.getElementById("demo").innerHTML = value;
+  
+
+});
+
+count = 0;
+setInterval(function(){console.log("Dio "+p[count++])},3000)
+  /*let timerCount = 0;
+  let timer = setInterval(()=>{
+    timerCount++;
+    document.getElementById('counter').innerHTML = timerCount;
+    if(timerCount>=gameTime/1000){
+        clearInterval(timer)
+    }
+  },1000)*/
+
+
+</script>
+
+</body>
+</html>

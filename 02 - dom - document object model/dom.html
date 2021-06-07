@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*#single {
+            color: rebeccapurple;
+        }
+        
+        .special {
+            background-color: aquamarine;
+        }*/
+        
+        .odd {
+            background-color: burlywood;
+        }
+        
+        .even {
+            background-color: chartreuse;
+        }
+        
+        .jolly {
+            background-color: cyan;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>D.O.M</h1>
+    <h2>Argomenti</h2>
+    <ul class="topList">
+        <li>nodelist</li>
+        <li>Element.classList</li>
+
+    </ul>
+    <ul class="test">
+        <li class="special">item</li>
+        <li id="single">item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li class="special">item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+
+    <script>
+        const list_item = document.querySelectorAll("ul.test li");
+
+        list_item.forEach(function(li, index) {
+
+            const className = index % 2 === 0 ? 'even' : 'odd'
+            const jollyClassName = index % 3 === 0 ? 'jolly' : className
+            li.classList.add(jollyClassName)
+        })
+
+
+        const list_item_special = document.querySelectorAll("ul li.special");
+        const single = document.querySelector("#single");
+
+        //console.log("list item", list_item);
+        //console.log("list item special", list_item_special);
+        //console.log("single", single);
+    </script>
+
+
+</body>
+
+</html>

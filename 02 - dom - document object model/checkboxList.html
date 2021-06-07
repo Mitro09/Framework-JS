@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CheckboxList</title>
+</head>
+
+<body>
+    <section>
+        <div class="cmd">
+            <button onclick="SelectAll()">select All</button>
+            <button onclick="deselectAll()">deselect All</button>
+        </div>
+        <ul class="chkboxList">
+            <li><input type="checkbox" name="" id=""><label for="">red</label></li>
+            <li><input type="checkbox" name="" id=""><label for="">green</label></li>
+            <li><input type="checkbox" name="" id=""><label for="">blue</label></li>
+            <li><input type="checkbox" name="" id=""><label for="">rebeccapurple</label></li>
+        </ul>
+    </section>
+
+    <script>
+        function SelectAll() {
+            const list_item = document.querySelectorAll("ul.chkboxList li input");
+
+
+            list_item.forEach(function(ele) {
+                ele.classList.add('all');
+                ele.setAttribute('checked', 'true');
+
+            })
+        }
+
+        function deselectAll() {
+            const list_item = document.querySelectorAll("ul.chkboxList li input");
+
+
+            list_item.forEach(function(ele) {
+                ele.classList.add('all');
+                ele.removeAttribute('checked');
+
+            })
+        }
+    </script>
+
+
+</body>
+
+</html>

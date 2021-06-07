@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function Persona(n) {
+
+            var nome = n;
+
+            this.parla = function parla(frase) {
+                console.log(nome + ": ", frase);
+            }
+        }
+
+        const persona1 = new Persona('Vincio')
+        const persona2 = new Persona('Giovanni')
+
+        var ciccia = "ciao sono una variabile";
+
+        console.log(persona1, persona2);
+    </script>
+
+</body>
+
+</html>

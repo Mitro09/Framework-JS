@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button id="bottone_1" class="btn btn-primary" type="button">Cliccami</button>
+                <button id="bottone_2" class="btn btn-primary" type="button">Cliccami</button>
+                <button id="bottone_3" class="btn btn-primary" type="button">Cliccami</button>
+                <button id="bottone_4" class="btn btn-primary" type="button">Cliccami</button>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            const bottone_1 = document.getElementById('bottone_1');
+            console.log("getElementById", bottone_1);
+
+            const bottone_1_qs = document.querySelector('#bottone_1');
+            console.log("querySelector", bottone_1_qs);
+
+            const bottone_1_qsa = document.querySelectorAll('#bottone_1');
+            console.log("querySelectorAll", bottone_1_qsa[0]);
+
+            console.log("................................");
+
+            const btn_list_cs = document.getElementsByClassName('btn');
+            console.log(btn_list_cs.forEach);
+
+            const btn_list_qs = document.querySelector('.btn');
+            console.log("querySelector", btn_list_qs);
+
+            const btn_list_qsa = document.querySelectorAll('.btn');
+            console.log("querySelectorAll", btn_list_qsa);
+
+            if (!bottone_1.classList) {
+                alert("non puoi usare classList");
+            }
+            if (!btn_list_cs.forEach) {
+                alert("non puoi usare forEach");
+            }
+        })
+    </script>
+
+</body>
+
+</html>
